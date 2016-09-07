@@ -9,7 +9,7 @@ state_t closing = {
     default_event_handler,   // open_button_pressed
     default_event_handler,   // opened_detected
     entry_to_closing,        // entry_to
-    default_event_handler    // exit_from
+    exit_from_closing        // exit_from
 };
 
 state_t* close_detected ()

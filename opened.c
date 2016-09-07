@@ -1,30 +1,30 @@
-#include "closed.h"
+#include "opened.h"
 #include "hardware.h"
 #include "statemodel.h" // For the other states
 
-// Create the object of the closed state.
+// Create the object of the opened state.
 state_t opened = {
-    default_event_handler,   // close_button_pressed
+    close_button,   // close_button_pressed
     default_event_handler,   // closed_detected
-    open_button,             // open_button_pressed
+    default_event_handler,   // open_button_pressed
     default_event_handler,   // opened_detected
-    entry_to_closed,         // entry_to
-    exit_from_closed         // exit_from
+    entry_to_opened,         // entry_to
+    exit_from_opened         // exit_from
 };
 
-state_t* open_button()
+state_t* close_button()
 {
-  exit_from_closed();
-  return &opening;
+  exit_from_opened();
+  return &closing;
 }
 
-void entry_to_closed()
+void entry_to_opened()
 {
-  set_closed_indicator(LED_ON);
+  set_opened_indicator(LED_ON);
 }
 
-void exit_from_closed()
+void exit_from_opened()
 {
-  set_closed_indicator(LED_OFF);
+  set_opened_indicator(LED_OFF);
 }
 
