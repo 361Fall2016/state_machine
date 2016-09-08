@@ -1,17 +1,23 @@
+//-----------------------------------------------------------------------------------
+// Assignment : Lab-02 OpeningSource
+// Date       : 09/11/2016
+//
+// Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
+//
+// File Name  : driver.c
+// ---------------------------------------------------------------------------------- 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "hardware.h"
 #include "statemodel.h"
-// add names, assignment name,
+//**** add names, assignment name, etc per syllabus****
 int
 main ()
 {
   printStateName();
-  //repeatedly get a char from the stdin and call the handle_event func
-  // that needs to be passed into the handle_event func
   event new_event;
   char key;
-  // use while loop that states that while key != x then switch on the  
  
   // need switch statement that sets the key entered to the correct event
   while ((key = getchar()) != 'x') { 
@@ -37,14 +43,5 @@ main ()
    }
 } 
 
-/* current state should be opened, then when you type o or C etc, then the program should react. */
-/*
-print in the order of:
-exit
-action
-new
-entry
-
-*/
 
 

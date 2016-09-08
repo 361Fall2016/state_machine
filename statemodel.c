@@ -1,3 +1,12 @@
+//-----------------------------------------------------------------------------------
+// Assignment : Lab-02 OpeningSource
+// Date       : 09/11/2016
+//
+// Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
+//
+// File Name  : statemodel.c 
+// ---------------------------------------------------------------------------------- 
+
 #include "statemodel.h"
 #include <stdlib.h>
 #include <stdio.h>

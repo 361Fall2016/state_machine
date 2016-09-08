@@ -1,3 +1,12 @@
+//-----------------------------------------------------------------------------------
+// Assignment : Lab-02 OpeningSource
+// Date       : 09/11/2016
+//
+// Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
+//
+// File Name  : closing.c
+// ---------------------------------------------------------------------------------- 
+
 #ifndef closing_c
 #define closing_c
 
