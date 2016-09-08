@@ -1,3 +1,12 @@
+//-----------------------------------------------------------------------------------
+// Assignment : Lab-02 OpeningSource
+// Date       : 09/11/2016
+//
+// Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
+//
+// File Name  : closed.c
+// ---------------------------------------------------------------------------------- 
+
 #include "closed.h"
 #include "state.h"
 #include "hardware.h"
