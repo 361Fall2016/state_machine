@@ -7,15 +7,14 @@ state_t opening = {
     close_button,            // close_button_pressed
     default_event_handler,   // closed_detected
     default_event_handler,   // open_button_pressed
-    opened_detected,         // opened_detected
+    open_detected,           // opened_detected
     entry_to_opening,        // entry_to
-    exit_from_opening        // exit_from
+    //exit_from_opening        // exit_from
 };
 
 state_t* open_detected()
 {
   set_motor(MOTOR_OFF);
-  exit_from_opening();
   return &opened;
 }
 
@@ -26,6 +25,5 @@ void entry_to_opening()
 
 state_t* close_button()
 {
-  exit_from_opening();
   return &closing;
 }

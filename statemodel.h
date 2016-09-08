@@ -19,6 +19,8 @@ extern state_t opening;
 
 void handle_event( event current_event );
 
+void printStateName(void);
+
 #endif
 
 

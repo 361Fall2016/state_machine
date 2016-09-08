@@ -1,4 +1,5 @@
 #include "closed.h"
+#include "state.h"
 #include "hardware.h"
 #include "statemodel.h" // For the other states
 
