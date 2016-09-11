@@ -18,21 +18,30 @@ state_t opening = {
     default_event_handler,   // open_button_pressed
     open_detected,           // opened_detected
     entry_to_opening,        // entry_to
-    //exit_from_opening        // exit_from
+    exit_from_opening        // exit_from
 };
 
+// call open detected handler, set motor, return address of opened state
 state_t* open_detected()
 {
   set_motor(MOTOR_OFF);
   return &opened;
 }
 
+// set action for entry into opening state
 void entry_to_opening()
 {
   set_motor(MOTOR_OPENING);
 }
 
+// call close button handler, exit from opening state, return addres
+// of closing state
 state_t* close_button()
 {
+  exit_from_opening();
   return &closing;
+}
+
+void exit_from_opening()
+{
 }

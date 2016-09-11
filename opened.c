@@ -13,7 +13,7 @@
 
 // Create the object of the opened state.
 state_t opened = {
-    close_button,   // close_button_pressed
+    close_button,            // close_button_pressed
     default_event_handler,   // closed_detected
     default_event_handler,   // open_button_pressed
     default_event_handler,   // opened_detected
@@ -21,17 +21,20 @@ state_t opened = {
     exit_from_opened         // exit_from
 };
 
+// call the close button handler, exit from opened state, return address of closing state
 state_t* close_button()
 {
   exit_from_opened();
   return &closing;
 }
 
+// set action for entry into opened state
 void entry_to_opened()
 {
   set_opened_indicator(LED_ON);
 }
 
+// set action for exit of opened state
 void exit_from_opened()
 {
   set_opened_indicator(LED_OFF);

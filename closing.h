@@ -17,7 +17,7 @@
 static state_t*  close_detected();
 static state_t*  open_button();
 static void      entry_to_closing();
-
+static void      exit_from_closing();
 #endif
 
 

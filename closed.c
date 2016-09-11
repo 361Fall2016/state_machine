@@ -22,17 +22,20 @@ state_t closed = {
     exit_from_closed         // exit_from
 };
 
+// call the open button handler, exit the closed state, and return address of opening state
 state_t* open_button()
 {
   exit_from_closed();
   return &opening;
 }
 
+// set the action to enter closed state
 void entry_to_closed()
 {
   set_closed_indicator(LED_ON);
 }
 
+// set the action when exiting the closed state
 void exit_from_closed()
 {
   set_closed_indicator(LED_OFF);

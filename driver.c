@@ -11,15 +11,16 @@
 #include <stdlib.h>
 #include "hardware.h"
 #include "statemodel.h"
-//**** add names, assignment name, etc per syllabus****
+
 int
 main ()
 {
-  printStateName();
-  event new_event;
-  char key;
+
+  printStateName();  // to print initial state
+  event new_event;   // event type variable to hold new event
+  char key;          // variable to hold input
  
-  // need switch statement that sets the key entered to the correct event
+  // continually get key from input, switch on key, call appropriate event handler
   while ((key = getchar()) != 'x') { 
 	 new_event = INVALID_EVENT;
  	 switch(key)
@@ -41,6 +42,7 @@ main ()
  		handle_event(new_event);
 	 }
    }
+  exit(0);
 } 
 
 
